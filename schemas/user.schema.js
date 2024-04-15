@@ -12,7 +12,7 @@ const createUserSchema = Joi.object({
 const loginUserSchema = Joi.object({
   body: Joi.object({
     email: Joi.string().email().required(),
-    password: Joi.string(),
+    password: Joi.string().required(),
   }),
 });
 

@@ -1,7 +1,7 @@
 const validateResource = (schema) => async (req, res, next) => {
   const options = {
     abortEarly: false,
-    allowUnknown: true,
+    allowUnKnown: true,
     stripUnKnown: true,
   };
 
@@ -14,7 +14,6 @@ const validateResource = (schema) => async (req, res, next) => {
       },
       options
     );
-    next();
   } catch (e) {
     return res.status(400).jsonp(e.details);
   }
